@@ -39,7 +39,7 @@
                             <div class="form-group">
                                 <input name="" id="" class="btn btn-primary" type="submit" value="Sign Up">
                             </div>
-                            <small>Sudah punya akun ? <a href="#">login</a> sekarang</small>
+                            <small>Sudah punya akun ? <a href="/">login</a> sekarang</small>
                         </form>
                     </div>
                 </div>
