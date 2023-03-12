@@ -17,4 +17,6 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::post('simpanuser', [AuthController::class, 'simpanuser']);
+Route::get('/', [AuthController::class, 'login']);
+Route::post('/simpanuser', [AuthController::class, 'simpanuser']);
+Route::post('/ceklogin', [AuthController::class, 'ceklogin']);
