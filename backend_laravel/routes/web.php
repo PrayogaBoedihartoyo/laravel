@@ -23,3 +23,4 @@ Route::post('/simpanuser', [AuthController::class, 'simpanuser']);
 Route::post('/ceklogin', [AuthController::class, 'ceklogin']);
 Route::get('/home', [NavController::class, 'home']);
 Route::get('/user', [NavController::class, 'user']);
+Route::get('/logout', [AuthController::class, 'logout']);
