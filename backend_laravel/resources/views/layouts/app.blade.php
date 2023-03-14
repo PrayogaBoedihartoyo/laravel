@@ -23,13 +23,13 @@
                         <div class="media">
                             <img class="align-self-center mr-3" src="https://play-lh.googleusercontent.com/ZyWNGIfzUyoajtFcD7NhMksHEZh37f-MkHVGr5Yfefa-IX7yj9SMfI82Z7a2wpdKCA=w240-h480-rw" height="50" width="50" alt="Generic placeholder image">
                             <div class="media-body">
-                                <h5 class="mt-0">User</h5>
+                                <h5 class="mt-0">{{ Auth::user()->name ?? ''}}</h5>
                                 <small> <i class="bi bi-alarm"></i> pkl 12.00 WIB</small>
                             </div>
                         </div>
                     </a>
                     <a class="dropdown-item" href="#"> <i class="bi bi-gear"></i> Setting</a>
-                    <a class="dropdown-item" href="#"> <i class="bi bi-box-arrow-right"></i> Logout</a>
+                    <a class="dropdown-item" href="/logout"> <i class="bi bi-box-arrow-right"></i> Logout</a>
                 </div>
             </div>
         </div>
