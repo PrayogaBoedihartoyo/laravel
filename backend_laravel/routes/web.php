@@ -14,13 +14,12 @@ use App\Http\Controllers\AuthController;
 |
 */
 
-Route::get('/register', function () {
-    return view('register');
-});
-
-Route::get('/', [AuthController::class, 'login']);
+Route::get('/register', [AuthController::class, 'register'])->middleware('guest')->name('register');
+Route::get('/', [AuthController::class, 'login'])->middleware('guest')->name('login');
 Route::post('/simpanuser', [AuthController::class, 'simpanuser']);
 Route::post('/ceklogin', [AuthController::class, 'ceklogin']);
-Route::get('/home', [NavController::class, 'home']);
-Route::get('/user', [NavController::class, 'user']);
-Route::get('/logout', [AuthController::class, 'logout']);
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/home', [NavController::class, 'home'])->name('home');
+    Route::get('/user', [NavController::class, 'user'])->name('user');
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+});
