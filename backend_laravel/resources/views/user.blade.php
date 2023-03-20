@@ -13,12 +13,16 @@
         </thead>
         <tbody>
         @foreach($user as $no => $u)
+            {{$user->firstItem()}}
             <tr>
-                <th scope="row">{{ ++$no }}</th>
+                <th scope="row">{{ $user->firstItem() + $no }}</th>
                 <td>{{ $u->name }}</td>
                 <td>{{$u->email}}</td>
             </tr>
         @endforeach
         </tbody>
     </table>
+    <span class="float-right">
+        {{ $user->links() }}
+    </span>
 @endsection
