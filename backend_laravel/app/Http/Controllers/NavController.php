@@ -12,7 +12,7 @@ class NavController extends Controller
     }
     public function user()
     {
-        $user = User::all();
+        $user = User::simplePaginate(1);
         return view('user', ['key' => 'user', 'user' => $user]);
     }
 }
