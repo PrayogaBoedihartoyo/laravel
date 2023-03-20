@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\User;
 class NavController extends Controller
 {
     public function home()
@@ -12,6 +12,7 @@ class NavController extends Controller
     }
     public function user()
     {
-        return view('user', ['key' => 'user']);
+        $user = User::all();
+        return view('user', ['key' => 'user', 'user' => $user]);
     }
 }

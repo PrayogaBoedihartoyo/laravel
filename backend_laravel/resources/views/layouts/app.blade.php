@@ -49,7 +49,7 @@
                 <div class="card-body">
                     <!-- Content -->
                     @yield('content')
-                    @yield('title')
+{{--                    @yield('title')--}}
                 </div>
             </div>
         </div>
