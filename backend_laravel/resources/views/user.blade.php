@@ -2,7 +2,15 @@
 @section('title', 'User')
 
 @section('content')
-    <h3>User</h3>
+    <h3>Halaman User</h3>
+    <div class="row">
+        <div class="col-lg-12">
+            <form class="form-inline float-right" method="GET" action="/search">
+                <input class="form-control mr-sm-2" name="cari" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
     <table class="table">
         <thead>
         <tr>
