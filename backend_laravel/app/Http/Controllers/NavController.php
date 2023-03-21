@@ -15,4 +15,12 @@ class NavController extends Controller
         $user = User::simplePaginate(1);
         return view('user', ['key' => 'user', 'user' => $user]);
     }
+
+    public function search(Request $request)
+    {
+        $search = $request->cari;
+        $user = User::where('name', 'like', "%" . $search . "%")->simplePaginate(1);
+        $user->appends($request->all());
+        return view('user', ['key' => 'user', 'user' => $user]);
+    }
 }
