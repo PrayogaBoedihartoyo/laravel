@@ -40,7 +40,7 @@
             <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                 <a class="nav-link {{ ($key == 'home') ? 'active' : '' }}" href="/home" role="tab">Home</a>
                 <a class="nav-link {{ ($key == 'user') ? 'active' : '' }}" href="/user" role="tab">User</a>
-                <a class="nav-link" href="#" role="tab">Messages</a>
+                <a class="nav-link {{ ($key == 'student') ? 'active' : '' }}" href="/student" role="tab">Student</a>
                 <a class="nav-link" href="#" role="tab">Settings</a>
             </div>
         </div>

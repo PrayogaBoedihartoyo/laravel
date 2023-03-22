@@ -22,5 +22,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', [NavController::class, 'home'])->name('home');
     Route::get('/user', [NavController::class, 'user'])->name('user');
     Route::get('/search', [NavController::class, 'search'])->name('search');
+    Route::get('/student', [NavController::class, 'student'])->name('student');
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 });
