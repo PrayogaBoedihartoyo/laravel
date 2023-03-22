@@ -11,7 +11,7 @@
             </form>
         </div>
     </div>
-    <table class="table">
+    <table class="table mt-2">
         <thead>
         <tr>
             <th scope="col">#</th>

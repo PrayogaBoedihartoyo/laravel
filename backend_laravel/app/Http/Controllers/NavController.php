@@ -23,4 +23,9 @@ class NavController extends Controller
         $user->appends($request->all());
         return view('user', ['key' => 'user', 'user' => $user]);
     }
+
+    public function student()
+    {
+        return view('student', ['key' => 'student']);
+    }
 }
